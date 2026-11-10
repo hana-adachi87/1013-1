@@ -5,7 +5,9 @@ function setup() {
 
   for(let i = 0; i < 8; i++){
     for(let j = 0; j < 8; j++){
-      // BLANK[1] ヒント： rectのx座標は size * i, y座標は size * j
+      rect(size * i, size * j, size, size)
+    // BLANK[1] ヒント： rectのx座標は size * i, y座標は size * j
+
     }
   }
 }
