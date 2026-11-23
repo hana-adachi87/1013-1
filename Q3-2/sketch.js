@@ -21,13 +21,39 @@ function draw(){
 
   // 地面を描く
   const groundY = height * 0.8;
-  fill(64, 192, 64);
+  fill(64, 192, 64); 
   rect(0, groundY, width, height - groundY);
 
   // BLANK[1] キャラクターの左右移動
+  let speed = 5;
+  if(keyIsDown(LEFT_ARROW)){ x -= 5; }
+  if(keyIsDown(RIGHT_ARROW)){ x += 5; }
+  
+   if(keyIsDown(SHIFT)){
+  speed = 10;
+}
+
+  if(keyIsDown(LEFT_ARROW)){ x -= speed; }
+
+  if(keyIsDown(RIGHT_ARROW)){ x += speed;}
 
   // BLANK[2] 重力とジャンプ
+  // 重力
+vy += g;
 
+// 地面との当たり判定
+if(y + size / 2 >= groundY){
+  y = groundY - size / 2;
+  vy = 0;
+
+  // スペースキーでジャンプ
+  if(keyIsDown(" ")){
+    vy = -15;
+  }
+}
+
+
+ 
   // 速くなりすぎないように制限
   vx = constrain(vx, -20, 20);
   vy = constrain(vy, -20, 20);
