@@ -63,8 +63,8 @@ function draw() {
     text("雪だるま完成！\nRキーで最初から作り直す",windowWidth*0.33, 50);
     if(parts[0] > parts[2] && parts[2] > parts[1]){
       fill(60,200,40);
-      textSize(windowWidth*0.33/5);
-      text("黄金比！！",windowWidth*0.33,150)
+      textSize(windowWidth*0.33/10);
+      text("黄金比の雪だるま！！",windowWidth*0.33,150)
     }else if(parts[2]>parts[1]&&parts[1]>parts[0]){
       fill(60,200,40);
       textSize(windowWidth*0.33/12);
