@@ -53,7 +53,7 @@ function draw() {
   textSize(15);
 
   if (stage < 3) {
-    text("← →で転がす", 20, 30);
+    text("← →で転がして雪だるまをつくろう", 20, 30);
     text("SPACEでパーツ完成", 20, 60);
     text("大きさ: " + ballSize, 20, 90);
     text("Rキーで最初から作り直す",20,120)
@@ -64,7 +64,7 @@ function draw() {
     if(parts[0] > parts[2] && parts[2] > parts[1]){
       fill(60,200,40);
       textSize(windowWidth*0.33/10);
-      text("黄金比の雪だるま！！",windowWidth*0.33,150)
+      text("黄金比の雪だるま！",windowWidth*0.33,150)
     }else if(parts[2]>parts[1]&&parts[1]>parts[0]){
       fill(60,200,40);
       textSize(windowWidth*0.33/12);
